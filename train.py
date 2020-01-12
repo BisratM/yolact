@@ -1,6 +1,6 @@
 import sys
-
-sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
+if '/opt/ros/kinetic/lib/python2.7/dist-packages' in sys.path:
+    sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
 from data import *
 from utils.augmentations import SSDAugmentation, BaseTransform
 from utils.functions import MovingAverage, SavePath
